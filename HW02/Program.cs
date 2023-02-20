@@ -24,7 +24,7 @@ int A = x2 - x1;
 int B = y2 - y1;
 int C = z1 - z2;
 
-double length = Math.Sqrt(A * A + B * B + C * C);
+double length = Math.Round(Math.Sqrt(A * A + B * B + C * C), 2);
 Console.WriteLine($"Длинна отрезка {length}");
 
 
