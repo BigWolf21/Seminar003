@@ -14,22 +14,15 @@ index = 0;
 while (index < 5)
 {
   value[index] = new Random().Next(0, 10);
+  Console.Write(value[index]);
   index++;
 }
-Console.WriteLine(value[0].ToString() + value[1] + value[2] + value[3] + value[4]);
 
-if (value[0] == value[4])
+if (value[0] == value[4] && value[1] == value[3])
 {
-  if (value[1] == value[3])
-  {
-    Console.WriteLine("Число палиндром!");
-  }
-  else
-  {
-    Console.WriteLine("Число не палиндром!");
-  }
+  Console.WriteLine(" - Число палиндром!");
 }
 else
 {
-  Console.WriteLine("Число не палиндром!");
+  Console.WriteLine(" - Число не палиндром!");
 }
