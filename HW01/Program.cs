@@ -1,4 +1,5 @@
-﻿/* Задача 19
+﻿using static Library;
+/* Задача 19
 Напишите программу, 
 которая принимает на вход пятизначное 
 число и проверяет, является ли оно 
@@ -8,12 +9,16 @@
 // 12821 -> да
 // 23432 -> да
 
-int[] value = new int[5];
-int index;
-index = 0;
-while (index < 5)
+
+// Решение задачи
+int index = 0;
+int size = GetNumber("Введите размер массива ");
+int num = GetNumber("Введите число для проверки палиндромности ");
+int [] value = CreateArray(size);
+while (num > 0)
 {
-  value[index] = new Random().Next(0, 10);
+  value[index] = num % 10;
+  num = num / 10;
   Console.Write(value[index]);
   index++;
 }
